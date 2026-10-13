@@ -21,7 +21,7 @@ StepP1 Plus is a modified version of StepP1 1.0.3 (5-panel focused StepMania for
 - **Evaluation total score.** TOTAL SCORE on the evaluation screen shows your P.Score (0 to 1,000,000), calculated from your judgments.
 - **Low pass color.** Passed scores below the A grade (800,000) are shown in green, following the new A threshold.
 
-The P.Score formula, the judge timing windows (EJ, NJ, HJ, VJ, XJ, UJ) and the save format are unchanged. Save data from StepP1 Plus 2.0.0 still works, and existing records are shown with the new grades.
+The P.Score formula, the judge timing windows (EJ, NJ, HJ, VJ, XJ, UJ) and the save format are unchanged. Save data from StepP1 Plus still works, and existing records are shown with the new grades.
 
 ## Grades
 Grades match the system currently used in Pump It Up Phoenix 2. Every grade has two versions:
