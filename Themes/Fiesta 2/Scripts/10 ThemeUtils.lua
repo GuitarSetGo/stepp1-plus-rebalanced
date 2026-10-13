@@ -163,13 +163,13 @@ function CalcPGrade(pscore)
 			(pscore >= 970000 and "S")		or 
 			(pscore >= 960000 and "AAA+")	or 
 			(pscore >= 950000 and "AAA")	or
-			(pscore >= 925000 and "AA+")	or
-			(pscore >= 900000 and "AA")		or
-			(pscore >= 825000 and "A+")		or
-			(pscore >= 750000 and "A")		or
-			(pscore >= 650000 and "B")		or
-			(pscore >= 550000 and "C")		or
-			(pscore >= 450000 and "D") 		or
+			(pscore >= 940000 and "AA+")	or
+			(pscore >= 920000 and "AA")		or
+			(pscore >= 900000 and "A+")		or
+			(pscore >= 800000 and "A")		or
+			(pscore >= 700000 and "B")		or
+			(pscore >= 600000 and "C")		or
+			(pscore >= 500000 and "D") 		or
 			"F"
 			);
 	return pgrade;
@@ -187,13 +187,13 @@ function CalcPGradeInt(pscore)
 			(pscore >= 970000 and 6)	or 
 			(pscore >= 960000 and 7)	or 
 			(pscore >= 950000 and 8)	or
-			(pscore >= 925000 and 9)	or
-			(pscore >= 900000 and 10)	or
-			(pscore >= 825000 and 11)	or
-			(pscore >= 750000 and 12)	or
-			(pscore >= 650000 and 13)	or
-			(pscore >= 550000 and 14)	or
-			(pscore >= 450000 and 15) 	or
+			(pscore >= 940000 and 9)	or
+			(pscore >= 920000 and 10)	or
+			(pscore >= 900000 and 11)	or
+			(pscore >= 800000 and 12)	or
+			(pscore >= 700000 and 13)	or
+			(pscore >= 600000 and 14)	or
+			(pscore >= 500000 and 15) 	or
 			16
 			);
 	return pgrade;

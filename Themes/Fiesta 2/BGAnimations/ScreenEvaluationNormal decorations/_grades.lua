@@ -13,24 +13,24 @@ local p2_grade = 21; -- Grade_Fail
 
 local stage_break = { PLAYER_1 = false, PLAYER_2 = false };
 
+local function CalcStageGrade(pn)
+	local pss = STATSMAN:GetCurStageStats():GetPlayerStageStats(pn);
+	local perfects = pss:GetTapNoteScores('TapNoteScore_W2') + pss:GetTapNoteScores('TapNoteScore_CheckpointHit');
+	local greats = pss:GetTapNoteScores('TapNoteScore_W3');
+	local goods = pss:GetTapNoteScores('TapNoteScore_W4');
+	local bads = pss:GetTapNoteScores('TapNoteScore_W5');
+	local misses = pss:GetTapNoteScores('TapNoteScore_Miss') + pss:GetTapNoteScores('TapNoteScore_CheckpointMiss');
+	local pscore = CalcPScore(perfects, greats, goods, bads, misses, pss:MaxCombo());
+	stage_break[pn] = pss:GetReachedLifeZero();
+	return CalcPGradeInt(pscore);
+end;
+
 if p1_joined then
-	local p1_pss = STATSMAN:GetCurStageStats():GetPlayerStageStats(PLAYER_1)
-	local p1_score = (math.floor(p1_pss:GetScore()/100)) - 1000000;
-	if p1_pss:GetReachedLifeZero() then
-		stage_break[PLAYER_1] = true;
-		p1_score = p1_score + 1000000;
-	end
-	p1_grade = CalcPGradeInt(p1_score);
+	p1_grade = CalcStageGrade(PLAYER_1);
 end;
 
 if p2_joined then
-	local p2_pss = STATSMAN:GetCurStageStats():GetPlayerStageStats(PLAYER_2)
-	local p2_score = (math.floor(p2_pss:GetScore()/100)) - 1000000;
-	if p2_pss:GetReachedLifeZero() then
-		stage_break[PLAYER_2] = true;
-		p2_score = p2_score + 1000000;
-	end
-	p2_grade = CalcPGradeInt(p2_score);
+	p2_grade = CalcStageGrade(PLAYER_2);
 end;
 
 if p1_grade == 21 then

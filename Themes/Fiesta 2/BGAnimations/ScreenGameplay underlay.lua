@@ -170,18 +170,9 @@ if GAMESTATE:IsSideJoined(PLAYER_1) then
 			if currentcombo > maxcomboP1 then maxcomboP1 = currentcombo end;
 			local stagebreak = curstats:GetReachedLifeZero();
 			pscoreP1 = CalcPScore(perfects, greats, goods, bads, misses, maxcomboP1);
-			local grade_bonus = 300000;
-			if misses > 0 then
-				grade_bonus = 0
-			elseif bads > 0 or goods > 0 then
-				grade_bonus = 100000
-			elseif greats > 0 then
-				grade_bonus = 150000
-			end;
 			local pass_bonus = 0;
 			if not stagebreak then pass_bonus = 1000000 end;
-			local proc_score = ( (pscoreP1 + pass_bonus) * 100 ) - grade_bonus;
-			if P1judge == ", VJ" or P1judge == ", XJ" or P1judge == ", UJ" then proc_score = proc_score/1.2 end;
+			local proc_score = (pscoreP1 + pass_bonus) * 100;
 			curstats:SetScore(proc_score);
 			local formatted_pscoreP1 = ScoreToPercent(pscoreP1);
 			if pscoreP1 > PersonalBest then
@@ -323,18 +314,9 @@ if GAMESTATE:IsSideJoined(PLAYER_2) then
 			if currentcombo > maxcomboP2 then maxcomboP2 = currentcombo end;
 			local stagebreak = curstats:GetReachedLifeZero();
 			pscoreP2 = CalcPScore(perfects,greats,goods,bads,misses,maxcomboP2);
-			local grade_bonus = 300000;
-			if misses > 0 then
-				grade_bonus = 0
-			elseif bads > 0 or goods > 0 then
-				grade_bonus = 100000
-			elseif greats > 0 then
-				grade_bonus = 150000
-			end;
 			local pass_bonus = 0;
 			if not stagebreak then pass_bonus = 1000000 end;
-			local proc_score = ( (pscoreP2 + pass_bonus) * 100 ) - grade_bonus;
-			if P2judge == ", VJ" or P2judge == ", XJ" or P2judge == ", UJ" then proc_score = proc_score/1.2 end;
+			local proc_score = (pscoreP2 + pass_bonus) * 100;
 			curstats:SetScore(proc_score);
 			local formatted_pscoreP2 = ScoreToPercent(pscoreP2);
 			if pscoreP2 > PersonalBest then
