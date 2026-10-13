@@ -47,8 +47,7 @@ if GAMESTATE:IsSideJoined(PLAYER_1) then
 	if not stagebreak and (pscore < 800000) then pgradecolor = "#03CC83"; end;
 	local plate = (stagebreak and "") or CalcPlate(greats,goods,bads,misses);
 	local platecolor = ColorPlate(plate);
-	local displayscore = math.floor(curstats:GetScore()/100);
-	if displayscore > 1000000 then displayscore = displayscore - 1000000 end;
+	local displayscore = pscore;
 	local chartstyle = GAMESTATE:GetCurrentSteps(PLAYER_1):GetChartStyle();
 	local processed_meter = GAMESTATE:GetCurrentSteps(PLAYER_1):GetMeter();
 	if processed_meter == 99 then processed_meter = 15 elseif processed_meter > 28 then processed_meter = 28 elseif processed_meter < 1 then processed_meter = 1 end;
@@ -105,8 +104,7 @@ if GAMESTATE:IsSideJoined(PLAYER_2) then
 	if not stagebreak and (pscore < 800000) then pgradecolor = "#03CC83"; end;
 	local plate = (stagebreak and "") or CalcPlate(greats,goods,bads,misses);
 	local platecolor = ColorPlate(plate);
-	local displayscore = math.floor(curstats:GetScore()/100);
-	if displayscore > 1000000 then displayscore = displayscore - 1000000 end;
+	local displayscore = pscore;
 	local processed_meter = GAMESTATE:GetCurrentSteps(PLAYER_2):GetMeter();
 	local chartstyle = GAMESTATE:GetCurrentSteps(PLAYER_2):GetChartStyle();
 	if processed_meter == 99 then processed_meter = 15 elseif processed_meter > 28 then processed_meter = 28 elseif processed_meter < 1 then processed_meter = 1 end;
