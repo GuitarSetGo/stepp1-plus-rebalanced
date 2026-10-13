@@ -6,7 +6,7 @@ StepP1 Plus is a modified version of StepP1 1.0.3 (5-panel focused StepMania for
 ## What's changed in this fork
 - **Phoenix 2 grade thresholds.** The P.Grade thresholds match Pump It Up Phoenix 2 (see the table below). SSS+ through AAA were already the same. AA+ through F changed:
 
-  | Grade | StepP1 Plus 2.0.0 | Phoenix 2 (this fork) |
+  | Grade | StepP1 Plus | Phoenix 2 (this fork) |
   |---|---|---|
   | AA+ | 925,000 | 940,000 |
   | AA | 900,000 | 920,000 |
